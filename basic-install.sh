@@ -8,3 +8,6 @@ yum install -y php55 php55-fpm php55-mysql php55-gd php55-xml php55-odbc php55-i
 yum install -y php-pear  
 yum install -y python-pip aws-cli nc telnet htop svn perl-libwww-perl pinentry rng-tools
 pip install ngxtop
+chkconfig nginx on
+chkconfig php-fpm on 
+chkconfig awslogs on 
