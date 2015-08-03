@@ -1,7 +1,7 @@
 #!/bin/sh
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-yum install -y php56w php56w-fpm php56w-gd php56w-mbstring php56w-pdo php56w-xml
+
 ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 yum update -y | tee -a /var/log/install-scripts.log
 
