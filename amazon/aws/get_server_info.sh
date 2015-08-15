@@ -17,3 +17,4 @@ fi
 if [[ ! -z "$AUTO_SCALING_GROUP" ]]; then
 	ASG=$(echo $AUTO_SCALING_GROUP | xargs)
 fi
+

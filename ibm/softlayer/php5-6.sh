@@ -4,10 +4,10 @@ rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm | tee -a /var/log/install-scripts.log
 yum install -y git | tee -a /var/log/install-scripts.log
 git clone https://github.com/peeweeh/server-basics.git /var/server-basics | tee -a /var/log/install-scripts.log
-sh /var/server-basics/general/networking/iptables-rules.sh
-
+#sh /var/server-basics/general/networking/iptables-rules.sh
+sh /var/server-basics/general/bash/set_default_bash.sh
 ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
-yum update -y | tee -a /var/log/install-scripts.log
+#yum -y -x 'kernel*' update | tee -a /var/log/install-scripts.log
 
 yum install -y git gcc-c++ pcre-dev pcre-devel zlib-devel make jq npm awslogs | tee -a /var/log/install-scripts.log
 yum install -y mysql nginx memcached  | tee -a /var/log/install-scripts.log
