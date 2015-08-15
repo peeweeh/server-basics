@@ -2,6 +2,7 @@ AMISTATE=$(aws ec2 describe-images --image-ids $1 | jq -r '.Images[].State');
 
 if [ -z "$AMISTATE" ] 
 	then
+	echo "AMI $1 Does not Exist"
 	exit 1
 else
 	echo "Waiting for $1 to Complete: $AMISTATE"
