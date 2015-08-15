@@ -1,10 +1,11 @@
 #!/bin/bash 
+echo "********* Basic Setup User Data ********"
+
 yum install -y git awscli 
 git clone https://github.com/peeweeh/server-basics.git /var/server-basics 
-sh /var/server-basics/basic-install.sh 
-sh /var/server-basics/get_configs.sh 
-sh /var/download_devops.sh 
-sh /var/development-operations/server/install_users.sh 
-sh /var/development-operations/server/setup_logs.sh 
-sh /var/development-operations/server/set_bash.sh 
-sh /var/development-operations/server/auto_on.sh 
+sh /var/server-basics/amazon/ec2/php5_5.sh
+sh /var/server-basics/amazon/ec2/install_users.sh
+sh /var/server-basics/amazon/ec2/setup_logs.sh
+sh /var/server-basics/amazon/ec2/set_bash.sh
+sh /var/server-basics/amazon/aws/ec2/set_hostname_from_asg.sh
+sh /var/server-basics/amazon/aws/configs/grab_nginx.sh

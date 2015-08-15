@@ -1,6 +1,7 @@
 #!/bin/sh
-source /var/development-operations/general/shell/get_server_info.sh
-echo "Add User Script"
+echo "********* Add User Script ********"
+source /var/server-basics/amazon/aws/get_server_info.sh
+
 if [ $(id -u) -eq 0 ]; then
 
 	if [[ -z "$1" ]]; then
