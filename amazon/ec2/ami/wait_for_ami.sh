@@ -1,5 +1,13 @@
 AMISTATE=$(aws ec2 describe-images --image-ids $1 | jq -r '.Images[].State'); 
-echo "Waiting for $1 to Complete: $AMISTATE"
+
+if [ -z "$AMISTATE" ] 
+	then
+	exit 1
+else
+	echo "Waiting for $1 to Complete: $AMISTATE"
+fi
+
+
 if [ "$AMISTATE" != "failed" ]; then
 	while [ "$AMISTATE" != "available" ]
 	do
