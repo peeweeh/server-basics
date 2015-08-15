@@ -6,6 +6,7 @@ yum install -y git | tee -a /var/log/install-scripts.log
 git clone https://github.com/peeweeh/server-basics.git /var/server-basics | tee -a /var/log/install-scripts.log
 #sh /var/server-basics/general/networking/iptables-rules.sh
 sh /var/server-basics/general/bash/set_default_bash.sh
+sh /var/server-basics/general/nginx/nginx-repo.sh
 ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 #yum -y -x 'kernel*' update | tee -a /var/log/install-scripts.log
 
@@ -18,4 +19,4 @@ pip install pyopenssl ndg-httpsclient pyasn1 python-swiftclient python-novaclien
 chkconfig nginx on
 chkconfig httpd on
 
-echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+echo "<?php phpinfo(); ?>" > /usr/share/nginx/htmlphpinfo.php
