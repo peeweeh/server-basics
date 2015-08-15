@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "********* Install PHP 5.6 on Softlayer ********"
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm | tee -a /var/log/install-scripts.log
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm | tee -a /var/log/install-scripts.log
 yum install -y git | tee -a /var/log/install-scripts.log
