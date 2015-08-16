@@ -3,7 +3,7 @@
 source /root/swift_profile
 cd /etc/nginx
 
-if [-z "$1"]
+if [ -z "$var" ]; then
 	then
 	echo "********* Container Prefix Not Found ********"
 	exit 1
@@ -17,6 +17,6 @@ else
 	swift download $1-logrotate
 	free && sync && echo 3 > /proc/sys/vm/drop_caches && free
 	service nginx restart
-	service php - fpm restart
+	service php-fpm restart
 
 fi
