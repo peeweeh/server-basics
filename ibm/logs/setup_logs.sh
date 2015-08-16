@@ -13,7 +13,7 @@ else
 	crontab -l > /tmp/cron
 
 	rm -rf /opt/log_sync.sh
-	cp  /var/server-basics/ibm/softlayer/logs/sync_logs.sh /opt/log_sync.sh
+	cp  /var/server-basics/ibm/logs/sync_logs.sh /opt/log_sync.sh
 	chmod +x /opt/log_sync.sh
 
 	echo "0 * * * *   /opt/log_sync.sh $1" >>  /tmp/cron
