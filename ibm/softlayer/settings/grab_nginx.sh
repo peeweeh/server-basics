@@ -3,11 +3,12 @@
 source /root/swift_profile
 cd /etc/nginx
 
-if [ -z "$var" ]; then
-	then
+if [ -z "$1" ]; then
+
 	echo "********* Container Prefix Not Found ********"
 	exit 1
 else
+
 	echo "********* Downloading Configs ********"
 	cd /etc/nginx
 	swift download $1-nginx
