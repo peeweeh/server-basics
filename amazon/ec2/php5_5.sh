@@ -1,5 +1,6 @@
 #!/bin/sh
 echo "********* Setup PHP 5.5 ********"
+useradd web
 sudo yum-config-manager --enable epel
 ln -sf /usr/share/zoneinfo/Asia/Singapore /etc/localtime
 yum update --exclude=kernel* -y | tee -a /var/log/messages
