@@ -19,7 +19,7 @@ if ( set -o noclobber; echo "$$" > "$lockfile") 2> /dev/null; then
         cp  /var/server-basics/amazon/ec2/ssh/import_users.sh /opt/import_users.sh
         chmod +x /opt/import_users.sh
 
-        echo "*/10 * * * * root /opt/import_users.sh" >>  /tmp/cron
+        echo "*/10 * * * * /opt/import_users.sh" >>  /tmp/cron
 
         crontab /tmp/cron
         rm -rf /tmp/cron
@@ -32,7 +32,8 @@ if ( set -o noclobber; echo "$$" > "$lockfile") 2> /dev/null; then
 
         echo "========== Restart SSH Service"
         service sshd restart
-
+        
+        touch $lockfile
         trap - INT TERM EXIT
 else
     	echo "Lock Exists: $lockfile owned by $(cat $lockfile)"
