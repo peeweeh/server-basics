@@ -107,6 +107,11 @@ ii() {
 	echo -e "\n${RED}Public facing IP Address :$NC " ;myip
 	echo
 }
+alias vi=vim
+alias svi='sudo vi'
+alias vis='vim "+set si"'
+alias edit='vim'
+alias ports='netstat -tulanp'
 
 #   httpDebug:  Download a web page and show info on what took time
 #   -------------------------------------------------------------------
