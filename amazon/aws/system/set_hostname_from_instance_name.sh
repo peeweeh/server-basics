@@ -6,6 +6,7 @@ export NAME=$(aws ec2 describe-tags --filters "Name=resource-id,Values=$IID" --r
 lockfile=/var/tmp/hostnamelock
 if ( set -o noclobber; echo "$$" > "$lockfile") 2> /dev/null; then
 		echo "hostname $NAME" >> /etc/rc.local
+		hostname $NAME
 		echo "Added Hostname Information"
 else
     	echo "Lock Exists: $lockfile owned by $(cat $lockfile)"
