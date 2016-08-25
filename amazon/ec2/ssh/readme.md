@@ -10,22 +10,21 @@ Based on: https://cloudonaut.io/manage-aws-ec2-ssh-access-with-iam/
 ## Caveats
 - All users added have SUDO access
 
-## Requirements
-- Git
-- Server must have latest AWS CLI
-
-## How to Install
-#### Create a User in IAM, and upload the SSH Key
-### Create this Policy and attach to the IAM Role
-`{ "Version": "2012-10-17", "Statement": [ { "Effect": "Allow", "Action": [ "iam:ListUsers" ], "Resource": [ "" ] }, { "Effect": "Allow", "Action": [ "iam:ListSSHPublicKeys", "iam:GetSSHPublicKey" ], "Resource": [ "" ] } ] }`
-
-### Download and install Server Basics
-`git clone https://github.com/peeweeh/server-basics.git /var/server-basics`
-
-### Run the Setup
-`sh /var/server-basics/amazon/ec2/ssh/setup.sh`
-
-## Future
+### Future
 - Add Support for Windows
 - Add Support for IAM Groups
 
+## Requirements
+- Git
+- Latest AWS CLI
+
+## How to Install
+#### Create a User in IAM, and upload the SSH Key
+#### Create this Policy and attach to the IAM Role that the instance uses
+`{ "Version": "2012-10-17", "Statement": [ { "Effect": "Allow", "Action": [ "iam:ListUsers" ], "Resource": [ "" ] }, { "Effect": "Allow", "Action": [ "iam:ListSSHPublicKeys", "iam:GetSSHPublicKey" ], "Resource": [ "" ] } ] }`
+
+#### Download and install Server Basics
+`git clone https://github.com/peeweeh/server-basics.git /var/server-basics`
+
+#### Run the Setup
+`sh /var/server-basics/amazon/ec2/ssh/setup.sh`
