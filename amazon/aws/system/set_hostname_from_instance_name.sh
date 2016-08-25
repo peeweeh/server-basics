@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "********* Set Hostname to reflect instance name on boot ********"
-source /var/server-basics/amazon/aws/get_server_info.sh
+source /var/server-basics/get_aws_info.sh
 export NAME=$(aws ec2 describe-tags --filters "Name=resource-id,Values=$IID" --region=$EC2_REGION | jq -r '.Tags[] | ( if .Key == "Name" then  .Value else  "" end )' )
 
 lockfile=/var/tmp/hostnamelock

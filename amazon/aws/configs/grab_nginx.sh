@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "********* Get Configuration from S3 Bucket ********"
-source /var/server-basics/amazon/aws/get_server_info.sh
+source /var/server-basics/get_aws_info.sh
 folder="hostname"
 bucket_folder="hostname-$HOSTNAME"
 if [[ ! -z "$1" ]]; then

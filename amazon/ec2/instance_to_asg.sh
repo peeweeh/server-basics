@@ -1,5 +1,5 @@
 #!/bin/sh
-source /var/server-basics/amazon/aws/get_server_info.sh
+source /var/server-basics/get_aws_info.sh
 LAUNCH_CONFIG="$CODENAME-$DAY$MONTH$YEAR-$RANDOM"
 echo "********* Create AMI $LAUNCH_CONFIG ********"
 main_ami=$(aws ec2 create-image --instance-id $SOURCE_INSTANCE --name $LAUNCH_CONFIG  | jq -r '.ImageId')

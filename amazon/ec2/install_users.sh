@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "********* Install Users from S3 ********"
-source /var/server-basics/amazon/aws/get_server_info.sh
+source /var/server-basics/get_aws_info.sh
 
 mkdir -p /tmp/sudoers
 aws s3 sync s3://$VPC/config/sudoers /tmp/sudoers
