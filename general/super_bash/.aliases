@@ -1,23 +1,6 @@
-echo "Hello $USER"
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-#   -------------------------------
-#   1.  ENVIRONMENT CONFIGURATION
-#   -------------------------------
-
-#   Change Prompt
-#   ------------------------------------------------------------
-export PS1="[\A]\[\e[32m\] \u\[\e[m\] @ \[\e[32m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\] : "
-export PS2=" : "
-
-#   Set Paths
-#   ------------------------------------------------------------
-export PATH="$PATH:/usr/local/bin/"
-export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-
-export BLOCKSIZE=1k
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
