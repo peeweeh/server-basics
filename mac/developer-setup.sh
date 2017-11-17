@@ -21,3 +21,7 @@ brew cask install google-cloud-sdk
 echo "Installing Node Stuff"
 brew install node
 npm install -g serverless
+
+echo "installing Pip"
+sudo easy_install pip
+pip install pylint
