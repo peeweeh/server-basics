@@ -18,7 +18,6 @@ brew install azure-cli
 brew tap caskroom/cask
 brew cask install google-cloud-sdk
 
-
 echo "Installing Node Stuff"
 brew install node
 npm install -g serverless
