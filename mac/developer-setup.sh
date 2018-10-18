@@ -15,6 +15,7 @@ brew install python
 brew install terraform
 brew install awscli
 brew install azure-cli
+brew install kubectl
 brew tap caskroom/cask
 brew cask install google-cloud-sdk
 
@@ -25,3 +26,4 @@ npm install -g serverless
 echo "installing Pip"
 sudo easy_install pip
 pip install pylint
+
