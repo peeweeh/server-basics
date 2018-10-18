@@ -25,5 +25,5 @@ npm install -g serverless
 
 echo "installing Pip"
 sudo easy_install pip
-pip install pylint
+sudo pip install pylint
 
